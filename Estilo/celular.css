@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+
+#menu_icon{
+    display: block;
+    color: white;
+    cursor: pointer;
+    
+}
+
+header, header > nav{
+    flex-flow: column nowrap;
+   
+}
+
+#logo{
+    flex-basis: 100px;
+    
+}
+
+a{
+    width: 90vw;
+}
+nav{
+    flex-flow: column wrap;
+    display: none;
+}
+
+.bg_seccao {
+    padding: 16px;
+    
+    
+}
+
+

@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+/* Importar fontes */
+@font-face {
+    font-family: 'Roboto' ;
+    src: url('/Fontes/Playfair,Radley,Roboto/Roboto/static/Roboto-LightItalic.ttf') format('truetype');
+    
+    
+        font-family: 'Playfair Display';
+        src: url('/Fontes/Playfair,Radley,Roboto/Playfair/Playfair-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+        font-weight: 300 900; /* Defina o intervalo de pesos da fonte variável */
+        font-style: normal;
+        font-style: italic;
+    
+
+        font-family: 'Radley';
+        src: url('/Fontes/Playfair,Radley,Roboto/Radley/Radley-Italic.ttf');
+    }
+   
+
+
+:root {
+    --Cor0: #021024;
+    --Cor1: #052659;
+    --Cor2: #5483B3;
+    --Cor3: #7da0ca;
+    --Cor4: #c1e8ff;
+
+    --fonte-padrao: Roboto, "Helvetica Neue", Arial, sans-serif;
+    --fonte-destaque: "Playfair", serif;
+    --fonte-especial:  "Radley", serif;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px ;
+    margin: 0px;
+    font-family: var(--fonte-padrao);
+   
+
+    
+}
+
+
+/* Imagens padrão */
+img {
+    max-width: 100%;
+    height: auto;
+    /*min-width: 1000px;*/
+    
+}
+img#img_destaque {
+    max-width: 100%;
+    height: auto;
+    width: 1300px;
+    
+}
+
+/* Container principal */
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr 150px;  
+    height: 100vh;  
+}
+
+/* Navegação */
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    background-color: var(--Cor2);
+}
+
+#logo{
+    flex: 0 0 100px;
+    
+}
+
+#menu_icon {
+    display: none;
+}
+
+/* Conteúdo principal dividido em 4 sections */
+.principal{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr); 
+    grid-template-columns: auto;
+    
+
+   
+}
+
+div#intro{
+    max-width: 950px;
+}
+
+/* Cores de exemplo para testar */
+.bg_seccao {
+    
+    background:linear-gradient(to left, #253b54, #456991);
+
+
+    padding: 120px;
+    
+    
+}
+
+.flexivel{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.seccao {
+    
+    text-align: center;
+}
+#sobre{
+    border-radius:0 0 0 60%;
+}
+
+
+
+#back{
+    background-color: #052659;
+    border-radius: 0 0 0 50%;
+}
+
+h1{
+    font-family:var(--fonte-destaque);
+    color: white;
+    font-size: 8vw;
+    font-weight: 300;
+    font-style: italic;
+}
+
+p{
+    color: white;
+    font-size: 1.3vw;
+}
+
+
