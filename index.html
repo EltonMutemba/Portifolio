@@ -36,28 +36,58 @@
         
         
             <main class="principal">
-                <section class="bg_seccao flexivel" id="home">
+                <!--INTRODUCAO-->
+                <section class="bg_seccao flexivel " id="home">
                     <div id="intro">
                         <h1>Bem-vindo.</h1>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae doloribus sint quae nemo, blanditiis facere. Commodi eligendi, inventore minus recusandae, ratione, dignissimos error earum optio numquam molestias rerum hic quidem?</p>
                        
                     </div>
-                    <div id="img_destaque">
+                    <div class="img_destaque">
                         <img src="imagens/img_semfundo/destaque2.png" alt="foto de destaque">
                     </div>
                 </section >
+
+                <!--SOBRE-->
                 <section class="bg_seccao flexivel" id="sobre" >
-                    Sobre me
+                    <img src="imagens/Rectangle 1.png" alt="">
+
+                    
+                    <div>
+                        <h2>Sobre-me</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid dicta deleniti possimus eaque sint qui provident officiis beatae praesentium libero non accusamus sit, labore illo cupiditate illum error eum inventore!</p>
+                        <a href="#rodape" class="botao">Contactos</a>
+                        <a href="#"class="botao">Baixar CV</a>
+                    </div>
                 </section>
         
-    
-            <section class="seccao flexivel" id="habilidade" >
-                Habilidades
+                <!--PROJECTO-->
+            <section class="seccao " id="projecto" >
+                <h2>Protfolio</h2>
+                <div id="servicos" >
+
+                    <a href="#mobile" onclick="mostrarProjeto('mobile')"">Mobile</a>
+                    <a href="#web" onclick="mostrarProjeto('desktop')">Website</a>
+                    <h3>Outro Projectos</h3>
+                </div>
+                <div>
+                    <div id="web" style="display:none;">
+                        <h3>Projecto Web</h3>
+                    </div>
+                    <div id="mobile" style="display:none;">
+                        <h3>Projecto Mobile</h3>
+                    </div>
+                    <div id="desktop">
+                        <h3>Projecto Desktop</h3>
+                    </div>
+                </div>
+
+
             </section>
-            <section class="seccao flexivel" id="servicos">
+            <section class="seccao " id="servicos">
                 Servicos oferecidos
             </section>
-            <section class="seccao flexivel" id="projecto">
+            <section class="seccao " id="Habilidades">
                 Meus projectos
             </section>
         </main>

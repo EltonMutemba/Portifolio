@@ -9,3 +9,13 @@ function clickMenu(){
     }
     
 }
+
+function mostrarProjeto(id) {
+    // esconde todos
+    document.getElementById('web').style.display = 'none';
+    document.getElementById('mobile').style.display = 'none';
+    document.getElementById('desktop').style.display = 'none';
+
+    // mostra só o clicado
+    document.getElementById(id).style.display = 'block';
+}

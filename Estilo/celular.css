@@ -15,6 +15,7 @@ header, header > nav{
 
 #logo{
     flex-basis: 100px;
+    width: 110px;
     
 }
 
@@ -30,6 +31,26 @@ nav{
     padding: 16px;
     
     
+}
+.principal{
+    
+}
+
+.flexivel{
+       
+    flex-flow: column-reverse nowrap;
+    justify-content: space-evenly;
+
+}
+
+h1{
+    text-align: center;
+    padding: 10px;
+}
+
+p{
+    font-size: 1em;
+    text-align: justify;
 }
 
 
