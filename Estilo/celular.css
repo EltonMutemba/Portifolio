@@ -13,6 +13,13 @@ header, header > nav{
    
 }
 
+img.img_destaque {
+    max-width: 100%;
+    width: 500px;;
+    
+    
+}
+
 #logo{
     flex-basis: 100px;
     width: 110px;
@@ -20,7 +27,9 @@ header, header > nav{
 }
 
 a{
-    width: 90vw;
+    display: block;
+    width: 100%;
+    max-width: 90vw;
 }
 nav{
     flex-flow: column wrap;
