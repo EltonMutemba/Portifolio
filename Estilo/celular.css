@@ -49,6 +49,7 @@ nav{
        
     flex-flow: column-reverse nowrap;
     justify-content: space-evenly;
+    padding: 20px 20px;
 
 }
 

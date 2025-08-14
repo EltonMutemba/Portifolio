@@ -49,6 +49,7 @@
 img{
     max-width: 100%;
     height: auto;
+
     
     
 }
@@ -65,6 +66,7 @@ img.img_destaque {
     grid-template-columns: auto;
     grid-auto-rows: auto 1fr 150px;  
     height: 100vh;  
+    
 
 }
 
@@ -74,6 +76,7 @@ header {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    padding: 50px 120px;
 }
 
 nav{
@@ -104,6 +107,9 @@ a:hover {
     
     
 }
+#home{
+    
+}
 
 #menu_icon {
     display: none;
@@ -116,18 +122,20 @@ a:hover {
     grid-template-columns: auto;
     
     
+    
 }
 
 div#intro{
-    max-width: 950px;
-    padding-top: 20px;
+   /* max-width: 950px;
+    padding-top: 20px;*/
 }
 
 /* Cores de exemplo para testar */
 .bg_seccao {
     
     background:linear-gradient(to left, #253b54, #456991);
-    /*padding: 120px;*/
+    
+    
     
 }
 
@@ -135,15 +143,19 @@ div#intro{
 .flexivel{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
-    padding: 50px;
+    justify-content: space-between;
+    padding: 20px 120px;
     
     flex:1 1 500px;
+
+    height: 100vh;
+    width: 100%;
 }
 
 .seccao {
     
     text-align: center;
+    padding: 20px 120px;
 }
 #sobre{
     border-radius:0 0 0 0;
@@ -158,12 +170,16 @@ div#intro{
     padding: 20px;
     margin: 10px;
     color: var(--Cor4);
+    
 
 }
 #botoes{
     display: flex;
+    
 }
-
+#sobre{
+    padding-left: 100px;
+}
 
 h1{
     font-family:var(--fonte-destaque);
@@ -171,13 +187,15 @@ h1{
     font-size: 8vw;
     font-weight: 200;
     font-style: italic;
+    
 }
 .bg_seccao h2{
     font-family: var(--fonte-destaque);
     color: white;
     font-size: 2vw;
     font-weight: 100;
-    padding: 10px;
+    
+    
 }
 
 h2{
@@ -185,14 +203,16 @@ h2{
     color:black;
     font-size: 2vw;
     font-weight: 100;
-    padding: 10px;
+    
+    
 }
 
 p{
     color: white;
     font-size: 1.3vw;
     font-weight: 100 ;
-    padding: 10px;
+     
+    
 }
 
 #servicos{
