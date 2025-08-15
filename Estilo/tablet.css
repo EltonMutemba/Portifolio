@@ -1,0 +1,128 @@
+/* Media Query para Tablets (768px e acima) */
+ 
+    .container {
+        padding: 0 40px;
+    }
+
+    header {
+        padding: 40px 0;
+    }
+    
+    #logo img {
+        height: 60px;
+    }
+
+    #menu_icon {
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        gap: 15px; /* Espaçamento entre os links */
+    }
+    
+    nav a {
+        padding: 10px 15px;
+        border-bottom: none;
+    }
+
+    .principal {
+        padding: 50px 0;
+    }
+
+    .flexivel {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 60px 0;
+        gap: 50px; /* Espaço entre texto e imagem */
+    }
+    
+    #sobre {
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+
+    .info h2 {
+        text-align: left;
+    }
+
+    .intro-texto, #sobreInfo {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .img_destaque {
+        flex: 1;
+        text-align: right;
+    }
+
+    h1 {
+        font-size: 4rem; /* Tamanho fixo para melhor controle */
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    #botoes {
+        justify-content: flex-start;
+    }
+
+    #projectos {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .desktop {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        text-align: left;
+    }
+
+    .desktop img {
+        max-width: 400px;
+        height: auto;
+    }
+    
+    #servicos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    #habilidades {
+        gap: 40px;
+    }
+    
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        padding: 50px 0;
+        gap: 50px;
+    }
+
+    .rodape-info {
+        flex: 1;
+        max-width: 350px;
+    }
+
+    .rodape-contacto,
+    .rodape-social {
+        flex: 1;
+        max-width: 250px;
+    }
+
+

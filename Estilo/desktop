@@ -1,0 +1,17 @@
+/* Media Query para Desktops Grandes (1024px e acima) */
+
+    .container {
+        padding: 0 120px;
+    }
+
+    header {
+        padding: 50px 0;
+    }
+
+    .principal {
+        padding: 80px 0;
+    }
+
+    .flexivel {
+        padding: 120px 0;
+    }

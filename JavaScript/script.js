@@ -1,21 +1,30 @@
+function clickMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}
 
-
-function clickMenu(){
-
-    if(menu.style.display=='none'){
-        menu.style.display ='flex'
-    }else{
-        menu.style.display ='none'
+// Opcional: para esconder o menu quando a tela é redimensionada para desktop
+window.addEventListener('resize', () => {
+    const menu = document.getElementById('menu');
+    if (window.innerWidth > 768) {
+        menu.classList.remove('active');
     }
+});
+
+// Lógica para mostrar projetos (ajustada para os novos IDs)
+function mostrarProjeto(projetoId) {
+    const projetos = document.querySelectorAll('.projeto_item');
+    projetos.forEach(projeto => {
+        projeto.style.display = 'none';
+    });
     
+    const projetoSelecionado = document.getElementById(projetoId + '_proj');
+    if (projetoSelecionado) {
+        projetoSelecionado.style.display = 'flex'; // ou 'block', dependendo do layout
+    }
 }
 
-function mostrarProjeto(id) {
-    // esconde todos
-    document.getElementById('web').style.display = 'none';
-    document.getElementById('mobile').style.display = 'none';
-    document.getElementById('desktop').style.display = 'none';
-
-    // mostra só o clicado
-    document.getElementById(id).style.display = 'flex';
-}
+// Exibir o projeto desktop por padrão na carga da página
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarProjeto('desktop');
+});
