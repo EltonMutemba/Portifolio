@@ -70,7 +70,7 @@ img{
 
 }
 
-/* Navegação */
+
 header {
     display: flex;
     flex-flow: row wrap;
@@ -112,6 +112,7 @@ a:hover {
 
 #menu_icon {
     display: none;
+    width: 50px;
 }
 
 /* Conteúdo principal dividido em 4 sections */
@@ -309,3 +310,34 @@ footer p{
     font-size: 0.8em;
 }
 
+.titulo {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--Cor3);
+    display: inline-block;       
+    width: 0;                     
+    animation: typingH1 3s steps(36) forwards, blinkCaret 0.8s step-end infinite;
+}
+
+.descricao {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 3s; /* espera o H1 terminar */
+}
+
+/* Digitação H1 */
+@keyframes typingH1 {
+    from { width: 0; }
+    to { width: 100%; border-right: none; }
+}
+
+/* Aparecer suavemente do P sem slide */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Cursor piscando */
+@keyframes blinkCaret {
+    50% { border-color: transparent; }
+}

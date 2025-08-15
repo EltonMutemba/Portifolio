@@ -1,7 +1,12 @@
 @charset "UTF-8";
 
+html,body{
+    overflow-x: hidden; 
+}
+
 
 #menu_icon{
+    padding: 20px;
     display: block;
     color: white;
     cursor: pointer;
@@ -17,7 +22,7 @@ header, header > nav{
 img.img_destaque {
   width: 100%;
   height: auto;
-  display: block;
+
     
 }
 
@@ -40,6 +45,34 @@ nav{
     width: 200px;
 }
 
+nav a {
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+   
+}
+
+#botoes {
+    flex-direction: column;
+    align-items: center;
+}
+
+.botao{
+    
+    background-color: var(--Cor1);
+    border-radius:20px;
+    font-size: 1.2em;
+    text-align: center;
+    padding:10px;  
+    color: var(--Cor4);
+    flex:1 0 100px
+    
+
+}
+
 .bg_seccao {
     padding: 16px;
     display: flex;
@@ -53,8 +86,10 @@ nav{
 .flexivel{
        
     flex-flow: column-reverse nowrap;
-    justify-content: space-evenly;
-    padding: 20px 20px;
+    padding:  20px;
+    height: auto;
+    gap: 20px;
+
 
 }
 
@@ -65,15 +100,15 @@ h1{
 
 p{
     font-size: 1em;
-    text-align: justify;
-}
-nav a {
-    color: white;
-    padding: 10px;
-    border-radius: 15px;
-    text-decoration: none;
     text-align: center;
-    font-size: 1.5em;
-   
+}
+
+#sobre h2{
+    font-family: var(--fonte-destaque);
+    color:white;
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+    padding: 10px;
 }
 
