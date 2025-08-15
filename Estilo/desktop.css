@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/* Estilos para Desktop (min-width: 1024px) */
+/* Este arquivo sobrescreve o tablet.css */
+
+/* HEADER */
+#menu a {
+font-size: 1.1rem;
+padding: 10px 20px;
+}
+
+/* SE��O HOME */
+.intro {
+justify-content: space-between;
+ padding: 64px 0;
+}
+
+.intro-texto {
+ max-width: 45%;
+}
+
+.img_destaque {
+max-width: 55%;
+}
+
+.intro-texto h1 {
+ font-size: 4rem;
+}
+
+.intro-texto p {
+font-size: 1.4rem;
+}
+
+/* SE��O SOBRE */
+.sobre {
+padding: 64px 0;
+ justify-content: space-between;
+}
+
+.sobre img {
+max-width: 35%;
+}
+
+#sobreInfo {
+max-width: 60%;
+}
+
+.info h2 {
+font-size: 3rem;
+}
+
+/* SE��O PROJETOS */
+.projeto_item {
+display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 30px;
+ width: 80%;
+max-width: 900px;
+}
+
+.projeto_item:nth-child(even) {
+flex-direction: row-reverse;
+}
+
+.projeto_item img {
+max-width: 50%;
+margin-top: 0;
+}
+
+/* SE��O SERVI�OS */
+.servicos-grid {
+ grid-template-columns: repeat(3, 1fr);
+}
+
+/* SE��O HABILIDADES */
+#habilidades-icones img {
+width: 100px;
+}
+
+/* RODAP� */
+footer {
+padding: 60px 100px;
+}
+
+.rodape-info {
+ max-width: 300px;
+}
+
+.rodape-contacto,
+.rodape-social {
+text-align: left;
+}
+

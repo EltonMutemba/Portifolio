@@ -11,10 +11,16 @@
     --cor-destaque: #00d9ff;
     --cor-texto: #ffffff;
     --cor-fundo: #000000;
+
+    --Cor0: #021024;
+    --Cor1: #052659;
+    --Cor2: #5483B3;
+    --Cor3: #7da0ca;
+    --Cor4: #c1e8ff;
 }
 
 body {
-    background-color: var(--cor-fundo);
+    background-color:var(--Cor0);
     font-family: 'Poppins', sans-serif;
     color: var(--cor-texto);
 }
@@ -36,7 +42,7 @@ a {
 }
 
 .bg_seccao {
-    background-color: var(--cor-secundaria);
+    background:linear-gradient(to left, #253b54, #456991);
     padding: 64px 0;
 }
 
@@ -48,8 +54,9 @@ h2 {
 /* HEADER - MOBILE-FIRST */
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px 0;
 }
 
@@ -59,21 +66,24 @@ header {
 
 #menu_icon {
     display: block; /* Visível em mobile */
-    font-size: 2rem;
+    font-size: 2rem !important;
     cursor: pointer;
+    color: white !important;
+
+    padding-left: 50px;
+    padding-top: 50px;
+  
 }
+
 
 #menu {
     display: none; /* Escondido em mobile por padrão */
     flex-direction: column;
-    position: absolute;
-    top: 75px;
-    left: 0;
     width: 100%;
-    background-color: var(--cor-secundaria);
+    background-color: var(--Cor2);
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    /*z-index: 1000;*/
 }
 
 #menu a {
@@ -158,8 +168,8 @@ header {
 
 #projectos_botoes a {
     padding: 10px 20px;
-    background-color: #444;
-    border-radius: 5px;
+    background-color: var(--Cor3);
+    border-radius: 20px;
     transition: background-color 0.3s;
 }
 
@@ -175,7 +185,7 @@ header {
 }
 
 .projeto_item {
-    background-color: #222;
+    background-color: var(--Cor2);
     padding: 24px;
     border-radius: 8px;
     width: 100%;
@@ -196,7 +206,7 @@ header {
 }
 
 .servico {
-    background-color: #222;
+    background-color: var(--Cor2);
     padding: 24px;
     border-radius: 8px;
 }
@@ -216,7 +226,7 @@ header {
 
 /* RODAPÉ */
 footer {
-    background-color: var(--cor-secundaria);
+    background-color: var(--Cor2);
     padding: 40px 16px;
     display: flex;
     flex-direction: column;
@@ -249,189 +259,6 @@ footer {
     margin: 0 8px;
 }
 
-
-/* Media Query para Desktops (769px e acima) */
-@media screen and (min-width: 769px) {
-    #menu_icon {
-        display: none; /* Escondido em desktop */
-    }
-
-    #menu {
-        display: flex; /* Visível em desktop */
-        position: static;
-        flex-direction: row;
-        width: auto;
-        box-shadow: none;
-    }
-
-    #menu a {
-        padding: 0 15px;
-        border: none;
-    }
-
-    .intro, .sobre {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-        align-items: center;
-    }
-
-    .intro-texto, #sobreInfo {
-        flex: 1;
-        max-width: 50%;
-    }
-
-    .img_destaque {
-        flex: 1;
-        text-align: right;
-    }
-
-    .sobre {
-        flex-direction: row-reverse;
-    }
-    
-    .servicos-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-        align-items: flex-start;
-    }
-
-    .rodape-info {
-        max-width: 30%;
-    }
+#menu:not(.active) {
+    display: none !important;
 }
-
-/* Media Query para Tablets (768px e acima) */
-@media screen and (min-width: 768px) {
-    .container {
-        padding: 0 40px;
-    }
-
-    header {
-        padding: 40px 0;
-    }
-    
-    #logo img {
-        height: 60px;
-    }
-
-    #menu_icon {
-        display: none;
-    }
-
-    nav {
-        display: flex !important;
-        position: static;
-        flex-direction: row;
-        background: none;
-        box-shadow: none;
-        gap: 15px; /* Espaçamento entre os links */
-    }
-    
-    nav a {
-        padding: 10px 15px;
-        border-bottom: none;
-    }
-
-    .principal {
-        padding: 50px 0;
-    }
-
-    .flexivel {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-        padding: 60px 0;
-        gap: 50px; /* Espaço entre texto e imagem */
-    }
-    
-    #sobre {
-        flex-direction: row-reverse;
-        text-align: left;
-    }
-
-    .info h2 {
-        text-align: left;
-    }
-
-    .intro-texto, #sobreInfo {
-        flex: 1;
-        max-width: 50%;
-    }
-
-    .img_destaque {
-        flex: 1;
-        text-align: right;
-    }
-
-    h1 {
-        font-size: 4rem; /* Tamanho fixo para melhor controle */
-    }
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    p {
-        font-size: 1.125rem;
-    }
-
-    #botoes {
-        justify-content: flex-start;
-    }
-
-    #projectos {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .desktop {
-        flex-direction: row;
-        align-items: center;
-        gap: 30px;
-        text-align: left;
-    }
-
-    .desktop img {
-        max-width: 400px;
-        height: auto;
-    }
-    
-    #servicos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-    
-    #habilidades {
-        gap: 40px;
-    }
-    
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: left;
-        padding: 50px 0;
-        gap: 50px;
-    }
-
-    .rodape-info {
-        flex: 1;
-        max-width: 350px;
-    }
-
-    .rodape-contacto,
-    .rodape-social {
-        flex: 1;
-        max-width: 250px;
-    }
-}
-
-

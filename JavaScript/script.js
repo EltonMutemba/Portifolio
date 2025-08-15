@@ -3,28 +3,31 @@ function clickMenu() {
     menu.classList.toggle('active');
 }
 
-// Opcional: para esconder o menu quando a tela é redimensionada para desktop
-window.addEventListener('resize', () => {
-    const menu = document.getElementById('menu');
-    if (window.innerWidth > 768) {
-        menu.classList.remove('active');
-    }
-});
-
-// Lógica para mostrar projetos (ajustada para os novos IDs)
-function mostrarProjeto(projetoId) {
+function mostrarProjeto(id) {
+    // 1. Oculta todos os projetos com a classe 'projeto_item'
     const projetos = document.querySelectorAll('.projeto_item');
     projetos.forEach(projeto => {
         projeto.style.display = 'none';
     });
-    
-    const projetoSelecionado = document.getElementById(projetoId + '_proj');
+
+    // 2. Mostra o projeto selecionado
+    const projetoSelecionado = document.getElementById(id);
     if (projetoSelecionado) {
-        projetoSelecionado.style.display = 'flex'; // ou 'block', dependendo do layout
+        projetoSelecionado.style.display = 'flex';
     }
 }
 
-// Exibir o projeto desktop por padrão na carga da página
+// 3. Adiciona um listener para a carga da página para exibir o projeto desktop por padrão
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarProjeto('desktop');
+    // Inicializa o primeiro projeto visível (você pode escolher qual)
+    mostrarProjeto('desktop_proj');
+});
+
+// 4. (Opcional) Adiciona um listener para esconder o menu em telas grandes
+window.addEventListener('resize', () => {
+    const menu = document.getElementById('menu');
+    // Se a largura da tela for maior que 768px, remove a classe 'active'
+    if (window.innerWidth > 768) {
+        menu.classList.remove('active');
+    }
 });

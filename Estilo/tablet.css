@@ -1,128 +1,135 @@
-/* Media Query para Tablets (768px e acima) */
- 
-    .container {
-        padding: 0 40px;
-    }
+.container {
+    padding: 0 40px;
+}
 
-    header {
-        padding: 40px 0;
-    }
-    
-    #logo img {
-        height: 60px;
-    }
+header {
+    padding: 40px 0;
+}
 
-    #menu_icon {
-        display: none;
-    }
+#logo img {
+    height: 60px;
+}
 
-    nav {
-        display: flex !important;
-        position: static;
-        flex-direction: row;
-        background: none;
-        box-shadow: none;
-        gap: 15px; /* Espaçamento entre os links */
-    }
-    
-    nav a {
-        padding: 10px 15px;
-        border-bottom: none;
-    }
+#menu_icon {
+    display: none; /* Escondido em desktop */
+}
 
-    .principal {
-        padding: 50px 0;
-    }
+nav {
+    display: flex !important; /* Força a exibição do menu */
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    gap: 15px; /* Espaçamento entre os links */
+}
 
-    .flexivel {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-        padding: 60px 0;
-        gap: 50px; /* Espaço entre texto e imagem */
-    }
-    
-    #sobre {
-        flex-direction: row-reverse;
-        text-align: left;
-    }
+#menu a {
+    padding: 0 15px;
+    border: none;
+}
 
-    .info h2 {
-        text-align: left;
-    }
+.principal {
+    padding: 50px 0;
+}
 
-    .intro-texto, #sobreInfo {
-        flex: 1;
-        max-width: 50%;
-    }
+.flexivel {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 60px 0;
+    gap: 50px; /* Espaço entre texto e imagem */
+}
 
-    .img_destaque {
-        flex: 1;
-        text-align: right;
-    }
+.intro-texto, #sobreInfo {
+    flex: 1;
+    max-width: 50%;
+}
 
-    h1 {
-        font-size: 4rem; /* Tamanho fixo para melhor controle */
-    }
+.img_destaque {
+    flex: 1;
+    text-align: right;
+}
 
-    h2 {
-        font-size: 2.5rem;
-    }
+.sobre {
+    flex-direction: row-reverse;
+    text-align: left;
+}
 
-    p {
-        font-size: 1.125rem;
-    }
+.servicos-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
 
-    #botoes {
-        justify-content: flex-start;
-    }
+footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+    padding: 50px 0;
+    gap: 50px;
+}
 
-    #projectos {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+.rodape-info {
+    flex: 1;
+    max-width: 350px;
+}
 
-    .desktop {
-        flex-direction: row;
-        align-items: center;
-        gap: 30px;
-        text-align: left;
-    }
+.rodape-contacto,
+.rodape-social {
+    flex: 1;
+    max-width: 250px;
+}
 
-    .desktop img {
-        max-width: 400px;
-        height: auto;
-    }
-    
-    #servicos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-    
-    #habilidades {
-        gap: 40px;
-    }
-    
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: left;
-        padding: 50px 0;
-        gap: 50px;
-    }
+/* Ajustes específicos para tipografia em desktop */
+h1 {
+    font-size: 4rem;
+}
 
-    .rodape-info {
-        flex: 1;
-        max-width: 350px;
-    }
+h2 {
+    font-size: 2.5rem;
+}
 
-    .rodape-contacto,
-    .rodape-social {
-        flex: 1;
-        max-width: 250px;
-    }
+p {
+    font-size: 1.125rem;
+}
 
+#botoes {
+    justify-content: flex-start;
+}
 
+.desktop {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.desktop img {
+    max-width: 400px;
+    height: auto;
+}
+
+#habilidades {
+    gap: 40px;
+}
+
+#menu_icon {
+    display: none; /* Escondido em desktop */
+}
+#menu {
+    display: flex ; /* Visível em desktop */
+    justify-content: space-around;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent; /* Remove o fundo */
+    box-shadow: none; /* Remove a sombra */
+    gap: 15px;
+}
+
+#menu a {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+#menu.active {
+    display: flex; /* Visível quando a classe .active é adicionada pelo JS */
+}
