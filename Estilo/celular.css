@@ -1,9 +1,9 @@
 @charset "UTF-8";
-
+/*
 html,body{
     overflow-x: hidden; 
 }
-
+*/
 
 #menu_icon{
     padding: 20px;
@@ -56,8 +56,9 @@ nav a {
 }
 
 #botoes {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    max-width: 500px;
 }
 
 .botao{
@@ -79,6 +80,7 @@ nav a {
     
     
 }
+
 .principal{
     
 }
@@ -86,11 +88,25 @@ nav a {
 .flexivel{
        
     flex-flow: column-reverse nowrap;
-    padding:  20px;
+    justify-content: center;
+    align-items: center;
     height: auto;
     gap: 20px;
 
 
+}
+.info{
+    flex:1;
+    background-color: #5483B3;
+    padding: 10px;
+    border-radius: 20px;
+    text-indent: 20px;
+    text-align: justify;
+    
+}
+.info h2{
+    font-size: 24px;
+    
 }
 
 h1{
@@ -110,5 +126,21 @@ p{
     font-weight: 100;
     text-align: center;
     padding: 10px;
+}
+#sobre{
+    padding: 20px;
+}
+
+
+#servicos{
+    flex-flow: column nowrap;
+    gap: 20px;
+} 
+
+#habilidades{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
 }
 

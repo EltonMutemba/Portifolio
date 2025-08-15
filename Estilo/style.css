@@ -151,8 +151,10 @@ div#intro{
    align-items: flex-end;
 }
 
+
 #intro p{
     max-width: 800px;
+    font-size: 2em;
 }
 
 /* Cores de exemplo para testar */
@@ -162,6 +164,31 @@ div#intro{
     border:20px;
     
     
+    
+}
+
+.info{
+    flex:1;
+    background-color: #5483B3;
+    padding: 50px;
+    border-radius: 20px;
+    text-indent: 20px;
+    text-align: justify;
+}
+.info h2{
+    padding: 0 0 20px;
+    color: white;
+    font-size: 48px;
+    color: var(--Cor0);
+}
+
+.info p{
+    
+    font-size: 24px;
+    color: white;
+    
+}
+#sobre picture{
     
 }
 
@@ -205,6 +232,7 @@ h1{
     font-style: italic;
     
 }
+/*
 .bg_seccao h2{
     font-family: var(--fonte-destaque);
     color: white;
@@ -213,7 +241,7 @@ h1{
     
     
 }
-
+*/
 h2{
     font-family: var(--fonte-destaque);
     color:black;
@@ -280,8 +308,8 @@ p{
 }
 
 
-
 footer{
+    height: 300px;
     display: flex;
     justify-content: space-around;
     
@@ -289,9 +317,13 @@ footer{
     color: white;
     padding: 50px 120px;
     gap: 100px;
-    
 
 }
+
+.rodape{
+    flex: 0 0 500px;
+}
+
 
 footer h3{
     width: 250px;
@@ -309,7 +341,7 @@ footer img{
 footer p{
     font-size: 0.8em;
 }
-
+/*
 .titulo {
     overflow: hidden;
     white-space: nowrap;
@@ -341,3 +373,4 @@ footer p{
 @keyframes blinkCaret {
     50% { border-color: transparent; }
 }
+*/
