@@ -17,5 +17,5 @@ function mostrarProjeto(id) {
     document.getElementById('desktop').style.display = 'none';
 
     // mostra só o clicado
-    document.getElementById(id).style.display = 'block';
+    document.getElementById(id).style.display = 'flex';
 }

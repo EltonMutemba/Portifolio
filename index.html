@@ -8,6 +8,12 @@
     <!--Link do google icon-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=call" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add_location" />
+
 
     <link rel="stylesheet" href="Estilo/style.css">
     <link rel="stylesheet" href="Estilo/celular.css" media="screen and (max-width:768px)"> 
@@ -37,14 +43,22 @@
         
             <main class="principal">
                 <!--INTRODUCAO-->
-                <section class="bg_seccao flexivel " id="home">
+                <section class="bg_seccao flexivel" id="home">
                     <div id="intro">
-                        <h1>Bem-vindo.</h1>
+
+                        
+                        <h1>Bem-vindo.</h1>  
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae doloribus sint quae nemo, blanditiis facere. Commodi eligendi, inventore minus recusandae, ratione, dignissimos error earum optio numquam molestias rerum hic quidem?</p>
                        
                     </div>
                     <div class="img_destaque">
-                        <img src="imagens/img_semfundo/destaque2.png" alt="foto de destaque">
+                       
+                        <picture>
+                            <source media="(max-width:768px )" srcset="imagens/img_semfundo/imagens para mobile destaque.png">
+
+                            <img src="imagens/img_semfundo/img-destaque desk.png">
+                            
+                        </picture>
                     </div>
                 </section >
 
@@ -58,8 +72,8 @@
 
                     
                     <div id="sobre">
-                        <h2>Sobre-me</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid dicta deleniti possimus eaque sint qui provident officiis beatae praesentium libero non accusamus sit, labore illo cupiditate illum error eum inventore!</p>
+                        <h2 >Sobre-me</h2>
+                        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid dicta deleniti possimus eaque sint qui provident officiis beatae praesentium libero non accusamus sit, labore illo cupiditate illum error eum inventore!</p>
                        
                         <div id="botoes">
                             <a href="#rodape" class="botao">Contactos</a>
@@ -70,15 +84,18 @@
                     </div>
                 </section>
         
-                <!--PROJECTO-->
+                <!--PROJECTOs-->
             <section class="seccao " id="projecto" >
                 <h2>Protfolio</h2>
-                <div id="servicos" >
+                <div id="projectos" >
 
-                    <a href="#mobile" onclick="mostrarProjeto('mobile')"">Mobile</a>
-                    <a href="#web" onclick="mostrarProjeto('desktop')">Website</a>
-                    <h3>Outro Projectos</h3>
+                    <a href="#mobile" onclick="mostrarProjeto('mobile')">Mobile</a>
+                    <a href="#web" onclick="mostrarProjeto('web')">Website</a>
+                    <a href="#desktop" onclick="mostrarProjeto('desktop')">Desktop</a>
+                    <a href="#outro" onclick="mostrarProjeto('outro')">Outro Projectos</a>
                 </div>
+
+
                 <div>
                     <div id="web" style="display:none;">
                         <h3>Projecto Web</h3>
@@ -86,23 +103,82 @@
                     <div id="mobile" style="display:none;">
                         <h3>Projecto Mobile</h3>
                     </div>
-                    <div id="desktop">
-                        <h3>Projecto Desktop</h3>
+                    <div class="desktop">
+                            <div>
+                                <h3>Projecto Desktop</h3>
+                                <p style="color: black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                            </div>
+                            <img src="imagens/img_semfundo/ChatGPT_Image_Aug_9__2025__08_14_38_PM-removebg-preview.png" alt="">
+                    </div>
+
+                    
+                    <div id="outro"  style="display:none;">
+                        <h3>Outros Projecto </h3>
                     </div>
                 </div>
 
 
             </section>
-            <section class="seccao " id="servicos">
-                Servicos oferecidos
+
+            <!--Servicos-->
+            <section class="seccao " >
+                <h2>Serviços</h2>
+                <div id="servicos">
+                    <div class="servico">
+                        <h3>Servico 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, facere repellat saepe eos quibusdam iusto iste ea laboriosam quidem? Beatae, illo non. Asperiores rerum sit vero mollitia necessitatibus accusamus reprehenderit?</p>
+                    </div>
+                    <div class="servico">
+                        <h3>Servico 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, facere repellat saepe eos quibusdam iusto iste ea laboriosam quidem? Beatae, illo non. Asperiores rerum sit vero mollitia necessitatibus accusamus reprehenderit?</p>
+                    </div>
+                    <div class="servico">
+                        <h3>Servico 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, facere repellat saepe eos quibusdam iusto iste ea laboriosam quidem? Beatae, illo non. Asperiores rerum sit vero mollitia necessitatibus accusamus reprehenderit?</p>
+                    </div>
+                </div>
+                
             </section>
-            <section class="seccao " id="Habilidades">
-                Meus projectos
+            <!--HABILIDADES-->
+            <section class="seccao " >
+                <h2>Habilidades</h2>
+                <div id="habilidades">
+                    <img src="imagens/icon/html.png" alt="">
+                    <img src="imagens/icon/Css.png" alt="">
+                    <img src="imagens/icon/JavaScript.png" alt="">
+                    <img src="imagens/icon/Java.png" alt="">
+                    <img src="imagens/icon/React.png" alt="">
+                </div>
+
             </section>
         </main>
 
+        <!--RODAPE-->
         <footer class="caixa" id="rodape">
-            Rodape
+            <section >
+                <img src="imagens/img_semfundo/logo.png" alt="" >
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem at sit cumque beatae doloremque inventore expedita quis. Voluptates accusamus ratione voluptatum unde quidem et fugiat accusantium placeat nisi! Deserunt, laborum!</p>
+            </section>
+            <section>
+                <h3>Contactos</h3>
+                <span class="material-symbols-outlined">
+                    call
+                    </span>
+                    <span class="material-symbols-outlined">
+                        mail
+                        </span>
+
+                        <span class="material-symbols-outlined">
+                            add_location
+                            </span>
+                <a href="#">emutemba1@gmail.com</a>
+            </section>
+            <section>
+                <h3>Siga-nos</h3>
+                <a href="https://www.linkedin.com/in/elton-mutemba-165724250/"><img src="imagens/icon/linkdin.png" alt="" class="socialmedia"></a>
+                <img src="imagens/icon/instagram.png" alt="" class="socialmedia">
+                <img src="imagens/icon/fb.png" alt="" class="socialmedia">
+            </section>
         </footer>
             
     </div>

@@ -10,13 +10,14 @@
 
 header, header > nav{
     flex-flow: column nowrap;
+        background-color: blue;
+    }
    
-}
 
 img.img_destaque {
-    max-width: 100%;
-    width: 500px;;
-    
+  width: 100%;
+  height: auto;
+  display: block;
     
 }
 
@@ -34,10 +35,14 @@ a{
 nav{
     flex-flow: column wrap;
     display: none;
+    justify-content: flex-start;
+    background-color: aqua;
+    width: 200px;
 }
 
 .bg_seccao {
     padding: 16px;
+    display: flex;
     
     
 }
@@ -62,5 +67,13 @@ p{
     font-size: 1em;
     text-align: justify;
 }
-
+nav a {
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+   
+}
 
