@@ -33,17 +33,22 @@ a {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 16px;
+    
+    
 }
 
+
+
 .seccao {
-    padding: 64px 0;
+   /* padding: 64px 0;*/
     text-align: center;
 }
 
 .bg_seccao {
     background:linear-gradient(to left, #253b54, #456991);
     padding: 64px 0;
+
+    
 }
 
 h2 {
@@ -58,6 +63,10 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 0;
+    
+
+    /*background-color: var(--Cor0);*/
+    
 }
 
 #logo img {
@@ -70,7 +79,7 @@ header {
     cursor: pointer;
     color: white !important;
 
-    padding-left: 50px;
+    padding-left: 10px;
     padding-top: 50px;
   
 }
@@ -116,6 +125,7 @@ header {
 .img_destaque img {
     max-width: 100%;
     height: auto;
+    
 }
 
 /* SEÇÃO SOBRE */
@@ -133,7 +143,7 @@ header {
 }
 
 #sobreInfo h2 {
-    font-size: 2.5rem;
+    font-size: 5rem;
 }
 
 #botoes {
@@ -182,6 +192,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    margin: 20px;
 }
 
 .projeto_item {
@@ -190,6 +201,7 @@ header {
     border-radius: 8px;
     width: 100%;
     text-align: left;
+
 }
 
 .projeto_item img {
@@ -209,6 +221,7 @@ header {
     background-color: var(--Cor2);
     padding: 24px;
     border-radius: 8px;
+    margin: 20px;
 }
 
 /* SEÇÃO HABILIDADES */

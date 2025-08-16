@@ -1,94 +1,262 @@
-@charset "UTF-8";
+/* RESET E ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Estilos para Desktop (min-width: 1024px) */
-/* Este arquivo sobrescreve o tablet.css */
 
-/* HEADER */
+body {
+    background-color:var(--Cor0);
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto);
+}
+p{
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 100%;
+    padding: 0;
+    
+}
+
+.seccao {
+    padding: 64px 0;
+    text-align: center;
+}
+
+.bg_seccao {
+    background:linear-gradient(to left, #253b54, #456991);
+    padding: 64px 0;
+    /*box-shadow: 5px 5px 15px var(--Cor3);*/
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 40px;
+}
+
+header {
+    flex-direction: row;
+
+  
+}
+
+#logo img {
+    height: 60px;
+    margin-left: 100px;
+}
+
+#menu_icon {
+    display: none;
+  
+}
+
+
+#menu {
+    display:flex; 
+    flex-direction:row;
+    justify-content: flex-end;
+    
+}
+
 #menu a {
-font-size: 1.1rem;
-padding: 10px 20px;
+
+    padding: 15px;
+    border-bottom: 1px solid #444;
 }
 
-/* SE��O HOME */
+#menu.active {
+    display: flex; /* Visível quando a classe .active é adicionada pelo JS */
+}
+
+/* SEÇÃO HOME */
 .intro {
-justify-content: space-between;
- padding: 64px 0;
-}
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
 
-.intro-texto {
- max-width: 45%;
-}
+    height: 100vh;
+    max-width: 100%;
 
-.img_destaque {
-max-width: 55%;
+    padding: 50px 100px;
+    flex: 1;
 }
 
 .intro-texto h1 {
- font-size: 4rem;
+    font-size: 7.5rem;
+    
 }
 
 .intro-texto p {
-font-size: 1.4rem;
+    font-size: 2.5rem;
+    line-height: 1.6;
+    text-indent: 30px;
+    
 }
 
-/* SE��O SOBRE */
+.img_destaque img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* SEÇÃO SOBRE */
 .sobre {
-padding: 64px 0;
- justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    max-width: 100%;
+    padding: 100px;
+    gap: 0;
 }
 
 .sobre img {
-max-width: 35%;
+    max-width: 100%;
+    height: auto;
+
+}
+#sobreInfo{
+    flex: 1;
+    padding-left: 20px;
+    justify-self: flex-start;
+   
 }
 
-#sobreInfo {
-max-width: 60%;
+
+#sobreInfo h2 {
+    font-size: 3.5rem;
+
+    
+    
+}
+#sobreInfo p {
+    font-size: 1.8rem;
+    text-indent: 30px;
 }
 
-.info h2 {
-font-size: 3rem;
+#botoes {
+    justify-content: flex-start;
+    gap: 24px;
 }
 
-/* SE��O PROJETOS */
+.botao {
+    background-color: var(--cor-destaque);
+    color: var(--Cor4);
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #00b3c6;
+}
+
+/* SEÇÃO PROJETOS */
+
+
+#projectos_botoes a {
+    padding: 10px 20px;
+    background-color: var(--Cor3);
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+
+.projetos_conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin: 20px;
+}
+
 .projeto_item {
-display: flex;
- flex-direction: row;
- align-items: center;
- gap: 30px;
- width: 80%;
-max-width: 900px;
-}
+    background-color: var(--Cor2);
+    padding: 24px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
 
-.projeto_item:nth-child(even) {
-flex-direction: row-reverse;
 }
 
 .projeto_item img {
-max-width: 50%;
-margin-top: 0;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 24px;
 }
 
-/* SE��O SERVI�OS */
+/* SEÇÃO SERVIÇOS */
 .servicos-grid {
- grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 24px;
 }
 
-/* SE��O HABILIDADES */
+.servico {
+    background-color: var(--Cor2);
+    padding: 24px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+/* SEÇÃO HABILIDADES */
+#habilidades-icones {
+   
+    justify-content: space-evenly;
+    gap: 0;
+}
+
 #habilidades-icones img {
-width: 100px;
+    width: 90px;
 }
 
-/* RODAP� */
+/* RODAPÉ */
 footer {
-padding: 60px 100px;
+    
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+
+    flex: row wrap;
+    justify-content: space-around;
+    color: white;
+    gap: 32px;
 }
 
-.rodape-info {
- max-width: 300px;
+.rodape-info img {
+    height: 60px;
+    margin-bottom: 16px;
 }
 
-.rodape-contacto,
-.rodape-social {
-text-align: left;
+.rodape-info p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
+.rodape-contacto h3, .rodape-social h3 {
+    margin-bottom: 16px;
+}
+
+.icones-contacto span {
+    font-size: 2rem;
+    margin: 0 8px;
+}
+
+.social-media-icones img {
+    width: 40px;
+    margin: 0 8px;
+}
+
+#menu:not(.active) {
+    display: none !important;
+}
