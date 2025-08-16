@@ -20,7 +20,7 @@
 }
 
 body {
-    background-color:var(--Cor0);
+    background-color: var(--Cor0);
     font-family: 'Poppins', sans-serif;
     color: var(--cor-texto);
 }
@@ -33,22 +33,23 @@ a {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    
-    
+
+
 }
 
 
 
 .seccao {
-   /* padding: 64px 0;*/
+    padding: 64px 0;
     text-align: center;
 }
 
 .bg_seccao {
-    background:linear-gradient(to left, #253b54, #456991);
+    background: linear-gradient(to left, #253b54, #456991);
     padding: 64px 0;
 
-    
+
+
 }
 
 h2 {
@@ -63,45 +64,53 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 0;
-    
+
 
     /*background-color: var(--Cor0);*/
-    
+
 }
 
 #logo img {
     height: 40px;
 }
 
+#menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 200px;
+    /* deixa o hamburguer livre, ajusta conforme altura do header */
+    left: 0;
+    width: 100%;
+    background: var(--Cor2);
+    z-index: 1000;
+
+}
+
 #menu_icon {
-    display: block; /* Visível em mobile */
+    display: block;
+    /* Visível em mobile */
     font-size: 2rem !important;
     cursor: pointer;
     color: white !important;
-
     padding-left: 10px;
     padding-top: 50px;
-  
+
 }
 
 
-#menu {
-    display: none; /* Escondido em mobile por padrão */
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--Cor2);
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /*z-index: 1000;*/
-}
+
 
 #menu a {
     padding: 15px;
     border-bottom: 1px solid #444;
+    text-align: center;
+
 }
 
 #menu.active {
-    display: flex; /* Visível quando a classe .active é adicionada pelo JS */
+    display: flex;
+    /* Visível quando a classe .active é adicionada pelo JS */
 }
 
 /* SEÇÃO HOME */
@@ -125,7 +134,7 @@ header {
 .img_destaque img {
     max-width: 100%;
     height: auto;
-    
+
 }
 
 /* SEÇÃO SOBRE */
@@ -200,7 +209,11 @@ header {
     padding: 24px;
     border-radius: 8px;
     width: 100%;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    gap: 50px;
 
 }
 
@@ -209,6 +222,15 @@ header {
     height: auto;
     display: block;
     margin-top: 24px;
+}
+.projeto_item h3{
+
+    font-size: 2rem;
+    padding: 10px;
+}
+.projeto_item p{
+    font-size: 1.2rem;
+    padding: 10px;
 }
 
 /* SEÇÃO SERVIÇOS */
@@ -222,6 +244,11 @@ header {
     padding: 24px;
     border-radius: 8px;
     margin: 20px;
+}
+
+.servico h3{
+    color: var(--Cor1);
+    padding: 10px;
 }
 
 /* SEÇÃO HABILIDADES */
@@ -258,8 +285,10 @@ footer {
     line-height: 1.5;
 }
 
-.rodape-contacto h3, .rodape-social h3 {
+.rodape-contacto h3,
+.rodape-social h3 {
     margin-bottom: 16px;
+    color: var(--Cor1);
 }
 
 .icones-contacto span {
@@ -272,6 +301,36 @@ footer {
     margin: 0 8px;
 }
 
-#menu:not(.active) {
-    display: none !important;
+
+
+.titulo {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--Cor3);
+    display: inline-block;       
+    width: 0;                     
+    animation: typingH1 2.5s steps(36) forwards, blinkCaret 0.8s step-end infinite;
+}
+
+.descricao {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 2.2s; /* espera o H1 terminar */
+}
+
+/* Digitação H1 */
+@keyframes typingH1 {
+    from { width: 0; }
+    to { width: 100%; border-right: none; }
+}
+
+/* Aparecer suavemente do P sem slide */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Cursor piscando */
+@keyframes blinkCaret {
+    50% { border-color: transparent; }
 }

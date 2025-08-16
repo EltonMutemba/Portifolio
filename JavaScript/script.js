@@ -20,14 +20,6 @@ function mostrarProjeto(id) {
 // 3. Adiciona um listener para a carga da página para exibir o projeto desktop por padrão
 document.addEventListener('DOMContentLoaded', () => {
     // Inicializa o primeiro projeto visível (você pode escolher qual)
-    mostrarProjeto('desktop_proj');
+    mostrarProjeto('desktop');
 });
 
-// 4. (Opcional) Adiciona um listener para esconder o menu em telas grandes
-window.addEventListener('resize', () => {
-    const menu = document.getElementById('menu');
-    // Se a largura da tela for maior que 768px, remove a classe 'active'
-    if (window.innerWidth > 768) {
-        menu.classList.remove('active');
-    }
-});
