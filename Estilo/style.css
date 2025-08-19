@@ -160,6 +160,7 @@ header {
 .intro p {
     font-size: 1.2rem;
     line-height: 1.6;
+    padding: 10px;
     
 }
 
@@ -176,6 +177,9 @@ header {
 .sobre img {
     max-width: 100%;
     height: auto;
+}
+.info p{
+    padding: 10px;
 }
 
 #sobreInfo h2 {
@@ -204,6 +208,8 @@ header {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
+
+
 
 /* SEÇÃO PROJETOS */
 #projectos_botoes {
@@ -374,7 +380,7 @@ footer {
 
 /* Cursor piscando */
 .titulo::after {
-    content: '|';
+    /*content: '|';*/
     display: inline-block;
     margin-left: 5px;
     color: white;
