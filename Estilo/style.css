@@ -151,7 +151,7 @@ header {
 }
 
 .intro h1 {
-    font-size: 5rem;
+    font-size: clamp(3.5rem, 6vw, 4rem);
     font-family: 'Playfair Display', serif; /* nome da fonte */
     color: white; /* cor da variável */
     font-weight: 700; /* opcional, conforme a fonte variável */
