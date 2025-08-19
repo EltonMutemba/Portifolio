@@ -1,4 +1,29 @@
 /* RESET E ESTILOS GERAIS */
+/* Roboto Light Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('/Fontes/Playfair,Radley,Roboto/Roboto/static/Roboto-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Playfair Display Variável */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/Fontes/Playfair,Radley,Roboto/Playfair/Playfair-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+    font-weight: 300 900; /* intervalo de pesos da fonte variável */
+    font-style: normal;
+}
+
+/* Radley Italic */
+@font-face {
+    font-family: 'Radley';
+    src: url('/Fontes/Playfair,Radley,Roboto/Radley/Radley-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +42,10 @@
     --Cor2: #5483B3;
     --Cor3: #7da0ca;
     --Cor4: #c1e8ff;
+
+    --fonte-padrao: Roboto, "Helvetica Neue", Arial, sans-serif;
+    --fonte-destaque: "Playfair Display", serif;
+    --fonte-especial: "Radley", serif;
 }
 
 body {
@@ -64,9 +93,7 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 0;
-
-
-    /*background-color: var(--Cor0);*/
+   
 
 }
 
@@ -84,6 +111,7 @@ header {
     width: 100%;
     background: var(--Cor2);
     z-index: 1000;
+    
 
 }
 
@@ -119,23 +147,22 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 32px;
+    gap: 10px;
 }
 
-.intro-texto h1 {
-    font-size: 3rem;
+.intro h1 {
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif; /* nome da fonte */
+    color: white; /* cor da variável */
+    font-weight: 700; /* opcional, conforme a fonte variável */
 }
 
-.intro-texto p {
+.intro p {
     font-size: 1.2rem;
     line-height: 1.6;
+    
 }
 
-.img_destaque img {
-    max-width: 100%;
-    height: auto;
-
-}
 
 /* SEÇÃO SOBRE */
 .sobre {
@@ -164,16 +191,18 @@ header {
 }
 
 .botao {
-    background-color: var(--cor-destaque);
-    color: var(--cor-primaria);
+    color: var(--Cor4);
     padding: 12px 24px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    border-radius: 30px;
+    font-weight: 300;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .botao:hover {
-    background-color: #00b3c6;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* SEÇÃO PROJETOS */
@@ -223,12 +252,14 @@ header {
     display: block;
     margin-top: 24px;
 }
-.projeto_item h3{
+
+.projeto_item h3 {
 
     font-size: 1.5rem;
     padding: 10px;
 }
-.projeto_item p{
+
+.projeto_item p {
     font-size: 1.2rem;
     padding: 10px;
 }
@@ -236,17 +267,17 @@ header {
 /* SEÇÃO SERVIÇOS */
 .servicos-grid {
     display: grid;
-    gap: 24px;
+    gap: 20px;
 }
 
 .servico {
     background-color: var(--Cor2);
-    padding: 24px;
+    padding: 20px;
     border-radius: 8px;
-    margin: 20px;
+    margin: 0 20px;
 }
 
-.servico h3{
+.servico h3 {
     color: var(--Cor1);
     padding: 10px;
 }
@@ -281,7 +312,7 @@ footer {
 }
 
 .rodape-info p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
@@ -320,17 +351,31 @@ footer {
 
 /* Digitação H1 */
 @keyframes typingH1 {
-    from { width: 0; }
-    to { width: 100%; border-right: none; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+        border-right: none;
+    }
 }
 
 /* Aparecer suavemente do P sem slide */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Cursor piscando */
 @keyframes blinkCaret {
-    50% { border-color: transparent; }
+    50% {
+        border-color: transparent;
+    }
 }
+
