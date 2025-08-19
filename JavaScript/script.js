@@ -23,3 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarProjeto('desktop');
 });
 
+function toggleDescricao() {
+    const descricao = document.getElementById('descricaoMasterWash');
+    descricao.style.display = (descricao.style.display === 'block') ? 'none' : 'block';
+}
+
+

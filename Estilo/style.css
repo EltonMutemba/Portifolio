@@ -264,6 +264,8 @@ header {
     padding: 10px;
 }
 
+
+
 /* SEÇÃO SERVIÇOS */
 .servicos-grid {
     display: grid;
@@ -280,6 +282,29 @@ header {
 .servico h3 {
     color: var(--Cor1);
     padding: 10px;
+}
+
+.descricao-completa {
+    display: none;
+    margin-top: 10px;
+}
+
+.saiba-mais-btn {
+    display: block; /* transforma em bloco para margin funcionar */
+    margin: 20px auto 0 auto; /* centraliza horizontalmente */
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.saiba-mais-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 /* SEÇÃO HABILIDADES */
@@ -319,7 +344,8 @@ footer {
 .rodape-contacto h3,
 .rodape-social h3 {
     margin-bottom: 16px;
-    color: var(--Cor1);
+    color: var(--Cor4);
+    font-size: 2rem;
 }
 
 .icones-contacto span {
@@ -333,49 +359,93 @@ footer {
 }
 
 
-
+/* Título com efeito de digitação */
 .titulo {
     overflow: hidden;
     white-space: nowrap;
-    border-right: 2px solid var(--Cor3);
-    display: inline-block;       
-    width: 0;                     
-    animation: typingH1 2.5s steps(36) forwards, blinkCaret 0.8s step-end infinite;
-}
-
-.descricao {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: 2.2s; /* espera o H1 terminar */
-}
-
-/* Digitação H1 */
-@keyframes typingH1 {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-        border-right: none;
-    }
-}
-
-/* Aparecer suavemente do P sem slide */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    border-right: 3px solid transparent; /* Cursor separado */
+    display: inline-block;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: white; /* Título final branco */
+    animation: typing 3s steps(30) forwards;
+    position: relative;
 }
 
 /* Cursor piscando */
-@keyframes blinkCaret {
-    50% {
-        border-color: transparent;
-    }
+.titulo::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 5px;
+    color: white;
+    animation: blinkCaret 0.7s step-end infinite;
 }
 
+/* Descrição aparece após o título */
+.descricao {
+    opacity: 0;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 1.1s; /* espera o título terminar */
+}
+
+/* Lista de itens */
+.descricao-completa ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.descricao-completa li {
+    background-color: #f0f2f5;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #e0e4e8;
+    color: #666;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: scaleIn 0.5s ease-out forwards;
+    animation-delay: 4.5s; /* depois da descrição */
+}
+
+.descricao-completa li:nth-child(2) { animation-delay: 4.7s; }
+.descricao-completa li:nth-child(3) { animation-delay: 4.9s; }
+.descricao-completa li:nth-child(4) { animation-delay: 5.1s; }
+
+/* Keyframes */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkCaret {
+    50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Hover do título */
+.titulo:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
