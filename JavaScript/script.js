@@ -77,5 +77,5 @@ const btn = document.getElementById("btnTop");
     setInterval(() => {
       index++;
       mostrarSlide(index);
-    }, 4000);
+    }, 9000);
 
