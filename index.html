@@ -10,6 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="Estilo/style.css">
     <link rel="stylesheet" href="Estilo/tablet.css" media="screen and (min-width: 768px)">
     <link rel="stylesheet" href="Estilo/desktop.css" media="screen and (min-width: 1440px)">
@@ -40,11 +42,14 @@
         <main>
             <!--class="bg_seccao">-->
             <section class=" intro  bg_seccao" id="home">
-                
-                    <h1 class="titulo">Bem-vindo.</h1>
-                    <p class="descricao">Sou Elton Mutemba, front-end developer apaixonado por transformar ideias em experiências digitais significativas. O meu trabalho vai além do código: procuro criar interfaces intuitivas, rápidas e visualmente atraentes, que facilitem a vida do utilizador e proporcionem uma navegação fluida.</p>
-                    <a href="#rodape" class="botao" id="b1">Fala Comigo</a>
-                
+
+                <h1 class="titulo">Bem-vindo.</h1>
+                <p class="descricao">Sou Elton Mutemba, front-end developer apaixonado por transformar ideias em
+                    experiências digitais significativas. O meu trabalho vai além do código: procuro criar interfaces
+                    intuitivas, rápidas e visualmente atraentes, que facilitem a vida do utilizador e proporcionem uma
+                    navegação fluida.</p>
+                <a href="#rodape" class="botao" id="b1">Fala Comigo</a>
+
 
             </section>
             <!--class="bg_seccao">-->
@@ -57,7 +62,10 @@
                 <div id="sobreInfo">
                     <div class="info">
                         <h2>Sobre mim</h2>
-                        <p>Acredito que a tecnologia é a chave para resolver problemas de forma criativa e eficiente. Com formação em Engenharia Informática, desenvolvo soluções que unem análise estratégica, pensamento crítico e foco em resultados. Trabalho com eficácia tanto em equipe quanto de forma independente, sempre buscando superar expectativas e entregar valor real.</p>
+                        <p>Acredito que a tecnologia é a chave para resolver problemas de forma criativa e eficiente.
+                            Com formação em Engenharia Informática, desenvolvo soluções que unem análise estratégica,
+                            pensamento crítico e foco em resultados. Trabalho com eficácia tanto em equipe quanto de
+                            forma independente, sempre buscando superar expectativas e entregar valor real.</p>
                     </div>
 
                     <div id="botoes">
@@ -79,39 +87,78 @@
                 <div class="projetos_conteudo">
                     <div id="web" class="projeto_item" style="display:none;">
                         <h3>Projecto Web</h3>
+                        <p class="em-atualizacao"><i class="fas fa-exclamation-triangle"></i> Em actualização – novos projectos serão publicados em breve.</p>
                     </div>
                     <div id="mobile" class="projeto_item" style="display:none;">
                         <h3>Projecto Mobile</h3>
+                        <p class="em-atualizacao"><i class="fas fa-exclamation-triangle"></i> Em actualização – novos projectos serão publicados em breve.</p>
                     </div>
+
+                    <!--Desktop-->
                     <div id="desktop" class="projeto_item">
                         <div class="desktop_proj_info">
                             <h3>MasterWash – Sistema de Gestão de Lavagem de Carros</h3>
-                            <p class="resumo"> O MasterWash é um aplicativo desktop desenvolvido em Java com interface gráfica em JFrame e base de dados SQLite, projetado para otimizar a gestão de negócios de lavagem de carros.</p>
+                            <p class="resumo"> O MasterWash é um aplicativo desktop desenvolvido em Java com interface
+                                gráfica em JFrame e base de dados SQLite, projetado para otimizar a gestão de negócios
+                                de lavagem de carros.</p>
                             <button class="saiba-mais-btn" onclick="toggleDescricao()">Saiba Mais</button>
                             <div class="descricao-completa" id="descricaoMasterWash">
                                 <p><strong>Funcionalidades:</strong></p>
                                 <ul>
                                     <li>Gestão de clientes e serviços: cadastro, atualização e remoção.</li>
                                     <li>Agendamento de lavagens: organizar horários e tipos de serviços.</li>
-                                    <li>Controle de faturamento e histórico: acompanhar serviços prestados e receitas.</li>
+                                    <li>Controle de faturamento e histórico: acompanhar serviços prestados e receitas.
+                                    </li>
                                     <li>Interface intuitiva, fácil de usar e eficiente.</li>
                                 </ul>
-                                <p><strong>Ferramentas e Tecnologias:</strong> JavaFX, SceneBuilder , SQLite, Launch4j</p>
-                                <p><strong>Destaques:</strong> Eficiência operacional, aplicação desktop standalone, fácil manutenção e escalabilidade.</p>
+                                <p><strong>Ferramentas e Tecnologias:</strong> JavaFX, SceneBuilder , SQLite, Launch4j
+                                </p>
+                                <p><strong>Destaques:</strong> Eficiência operacional, aplicação desktop standalone,
+                                    fácil manutenção e escalabilidade.</p>
                             </div>
                         </div>
-                       
-                       
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="imagens/img_semfundo/img-mobile_projectos.png">
-                            <img src="imagens/img_semfundo/img-desktop_projectos.png" alt="Projeto Desktop">
-                        </picture>
+
+
+                        <div class="carrossel">
+                            <div class="slides">
+                                <picture>
+                                    <source media="(max-width: 768px)"
+                                        srcset="imagens/img_semfundo/img-mobile_login.png">
+                                    <img src="imagens/img_semfundo/img-desktop_login.png" alt="imagem do tela login">
+                                </picture>
+
+                                <picture>
+                                    <source media="(max-width: 768px)"
+                                        srcset="imagens/img_semfundo/img-mobile_dashboard.png">
+                                    <img src="imagens/img_semfundo/img-desktop_dashboard.png" alt="imagem da tela dashboard">
+                                </picture>
+
+                                <picture>
+                                    <source media="(max-width: 768px)"
+                                        srcset="imagens/img_semfundo/img-mobile_clientes.png">
+                                    <img src="imagens/img_semfundo/img-desktop_clientes.png" alt="imagem da tela cliente">
+                                </picture>
+
+                                <picture>
+                                    <source media="(max-width: 768px)"
+                                        srcset="imagens/img_semfundo/img-mobile_servicos.png">
+                                    <img src="imagens/img_semfundo/img-desktop_servicos.png" alt="imagem da tela servicos">
+                                </picture>
+                                
+                            </div>
+
+                            <!-- Botões de navegação -->
+                            <button class="btn prev">&#10094;</button>
+                            <button class="btn next">&#10095;</button>
+                        </div>
 
                     </div>
                     <div id="outro" class="projeto_item" style="display:none;">
                         <h3>Rede de Busca Inteligente com PyTorch</h3>
-                        
-                            <p>Desenvolvi uma rede de busca usando PyTorch que permite pesquisar informações de forma semântica, com maior precisão e relevância nos resultados. O projeto envolve processamento de linguagem natural, vetorização de dados e otimização de rede neural.</p>
+
+                        <p>Desenvolvi uma rede de busca usando PyTorch que permite pesquisar informações de forma
+                            semântica, com maior precisão e relevância nos resultados. O projeto envolve processamento
+                            de linguagem natural, vetorização de dados e otimização de rede neural.</p>
                     </div>
                 </div>
             </section>
@@ -174,9 +221,10 @@
                 <div class="social-media-icones">
                     <a href="https://www.linkedin.com/in/elton-mutemba-165724250/" target="_blank"><img
                             src="imagens/icon/linkdin.png" alt="LinkedIn" class="socialmedia"></a>
-                    <a href="https://www.instagram.com/prj.code/" target="_blank"><img src="imagens/icon/instagram.png" alt="Instagram"
-                            class="socialmedia"></a>
-                    <a href="https://web.facebook.com/elton.mutemba.2025" target="_blank"><img src="imagens/icon/fb.png" alt="Facebook" class="socialmedia"></a>
+                    <a href="https://www.instagram.com/prj.code/" target="_blank"><img src="imagens/icon/instagram.png"
+                            alt="Instagram" class="socialmedia"></a>
+                    <a href="https://web.facebook.com/elton.mutemba.2025" target="_blank"><img src="imagens/icon/fb.png"
+                            alt="Facebook" class="socialmedia"></a>
                 </div>
             </div>
         </footer>

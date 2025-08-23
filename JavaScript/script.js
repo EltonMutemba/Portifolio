@@ -43,3 +43,39 @@ const btn = document.getElementById("btnTop");
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+
+
+    //Carrossel
+
+    const slides = document.querySelector('.slides');
+    const imagens = document.querySelectorAll('.slides img');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    let index = 0;
+
+    function mostrarSlide(n) {
+      if (n < 0) {
+        index = imagens.length - 1;
+      } else if (n >= imagens.length) {
+        index = 0;
+      }
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      index--;
+      mostrarSlide(index);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      index++;
+      mostrarSlide(index);
+    });
+
+    // Auto-play a cada 3 segundos
+    setInterval(() => {
+      index++;
+      mostrarSlide(index);
+    }, 4000);
+

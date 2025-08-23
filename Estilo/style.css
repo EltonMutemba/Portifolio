@@ -270,6 +270,13 @@ header {
     padding: 10px;
 }
 
+.em-atualizacao {
+    font-style: italic;
+    color: white;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+
 
 
 /* SEÇÃO SERVIÇOS */
@@ -476,4 +483,53 @@ footer {
 
   #btnTop:hover {
     background-color:var(--Cor1);
+  }
+
+
+  /*CSS Carrosel*/
+
+  .carrossel {
+    position: relative;
+    width: 100%; /* ocupar a largura total no mobile */
+    max-width: 600px; /* no desktop fica limitado */
+    overflow: hidden;
+    border-radius: 12px;
+    margin: auto;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+  }
+
+  .slides img,
+.slides picture {
+  min-width: 100%; /* cada slide ocupa 100% da largura */
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+  /* Botões de navegação */
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
   }
