@@ -11,7 +11,8 @@
 @font-face {
     font-family: 'Playfair Display';
     src: url('/Fontes/Playfair,Radley,Roboto/Playfair/Playfair-VariableFont_opsz,wdth,wght.ttf') format('truetype');
-    font-weight: 300 900; /* intervalo de pesos da fonte variável */
+    font-weight: 300 900;
+    /* intervalo de pesos da fonte variável */
     font-style: normal;
 }
 
@@ -66,12 +67,26 @@ a {
 
 }
 
-
-
 .seccao {
     padding: 64px 0;
     text-align: center;
+
 }
+
+
+
+.animacao {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.animacao.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 2.5s ease-out; /* mais lento */
+}
+
 
 .bg_seccao {
     background: linear-gradient(to left, #253b54, #456991);
@@ -93,7 +108,7 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 0;
-   
+
 
 }
 
@@ -111,7 +126,7 @@ header {
     width: 100%;
     background: var(--Cor2);
     z-index: 1000;
-    
+
 
 }
 
@@ -152,16 +167,19 @@ header {
 
 .intro h1 {
     font-size: clamp(3.5rem, 6vw, 4rem);
-    font-family: 'Playfair Display', serif; /* nome da fonte */
-    color: white; /* cor da variável */
-    font-weight: 700; /* opcional, conforme a fonte variável */
+    font-family: 'Playfair Display', serif;
+    /* nome da fonte */
+    color: white;
+    /* cor da variável */
+    font-weight: 700;
+    /* opcional, conforme a fonte variável */
 }
 
 .intro p {
     font-size: 1.2rem;
     line-height: 1.6;
     padding: 10px;
-    
+
 }
 
 
@@ -178,7 +196,8 @@ header {
     max-width: 100%;
     height: auto;
 }
-.info p{
+
+.info p {
     padding: 10px;
 }
 
@@ -275,7 +294,7 @@ header {
     color: white;
     font-size: 1.1rem;
     opacity: 0.8;
-  }
+}
 
 
 
@@ -303,8 +322,10 @@ header {
 }
 
 .saiba-mais-btn {
-    display: block; /* transforma em bloco para margin funcionar */
-    margin: 20px auto 0 auto; /* centraliza horizontalmente */
+    display: block;
+    /* transforma em bloco para margin funcionar */
+    margin: 20px auto 0 auto;
+    /* centraliza horizontalmente */
     background: linear-gradient(135deg, #00c6ff, #0072ff);
     color: white;
     border: none;
@@ -317,7 +338,7 @@ header {
 
 .saiba-mais-btn:hover {
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* SEÇÃO HABILIDADES */
@@ -376,11 +397,13 @@ footer {
 .titulo {
     overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid transparent; /* Cursor separado */
+    border-right: 3px solid transparent;
+    /* Cursor separado */
     display: inline-block;
     font-weight: 800;
     font-size: clamp(2rem, 5vw, 4rem);
-    color: white; /* Título final branco */
+    color: white;
+    /* Título final branco */
     animation: typing 3s steps(30) forwards;
     position: relative;
 }
@@ -405,7 +428,8 @@ footer {
     margin-left: auto;
     margin-right: auto;
     animation: fadeIn 1.2s ease-out forwards;
-    animation-delay: 1.1s; /* espera o título terminar */
+    animation-delay: 1.1s;
+    /* espera o título terminar */
 }
 
 /* Lista de itens */
@@ -430,31 +454,61 @@ footer {
     transform: scale(0.9);
     opacity: 0;
     animation: scaleIn 0.5s ease-out forwards;
-    animation-delay: 0.5s; /* depois da descrição */
+    animation-delay: 0.5s;
+    /* depois da descrição */
 }
 
-.descricao-completa li:nth-child(2) { animation-delay: 0.7s; }
-.descricao-completa li:nth-child(3) { animation-delay: 0.9s; }
-.descricao-completa li:nth-child(4) { animation-delay: 1.1s; }
+.descricao-completa li:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.descricao-completa li:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.descricao-completa li:nth-child(4) {
+    animation-delay: 1.1s;
+}
 
 /* Keyframes */
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blinkCaret {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes scaleIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Hover do título */
@@ -464,9 +518,10 @@ footer {
 }
 
 
-   /* Botão flutuante */
-   #btnTop {
-    display: none; /* só aparece quando o user rolar */
+/* Botão flutuante */
+#btnTop {
+    display: none;
+    /* só aparece quando o user rolar */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -479,57 +534,60 @@ footer {
     cursor: pointer;
     font-size: 20px;
     transition: 0.3s;
-  }
+}
 
-  #btnTop:hover {
-    background-color:var(--Cor1);
-  }
+#btnTop:hover {
+    background-color: var(--Cor1);
+}
 
 
-  /*CSS Carrosel*/
+/*CSS Carrosel*/
 
-  .carrossel {
+.carrossel {
     position: relative;
-    width: 100%; /* ocupar a largura total no mobile */
-    max-width: 600px; /* no desktop fica limitado */
+    width: 100%;
+    /* ocupar a largura total no mobile */
+    max-width: 600px;
+    /* no desktop fica limitado */
     overflow: hidden;
     border-radius: 12px;
     margin: auto;
-  }
+}
 
-  .slides {
+.slides {
     display: flex;
     transition: transform 1s ease-in-out;
     width: 100%;
-  }
-
-  .slides img,
-.slides picture {
-  min-width: 100%; /* cada slide ocupa 100% da largura */
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
 }
 
-  /* Botões de navegação */
-  .btn {
+.slides img,
+.slides picture {
+    min-width: 100%;
+    /* cada slide ocupa 100% da largura */
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Botões de navegação */
+.btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 2rem;
-    
+
     background: transparent;
     color: white;
     border: none;
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 50%;
-  }
+}
 
-  .prev {
+.prev {
     left: 10px;
-  }
+}
 
-  .next {
+.next {
     right: 10px;
-  }
+}
